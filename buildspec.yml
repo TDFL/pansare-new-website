@@ -7,6 +7,11 @@ phases:
     commands:
       - npm install -g htmlhint
 
+  pre_build:
+    commands:
+      - echo "Checking HTML files..."
+      - htmlhint "**/*.html"
+
   build:
     commands:
       - echo "Validating HTML..."
